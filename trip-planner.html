@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Trip Planner and Itinerary Builder | Hardpack Trip Co.</title>
+<meta name="description" content="Build a day-by-day itinerary in your browser. Time-stamped stops, travel time between them, and a running cost per person in USD. Free, no account needed.">
+<link rel="canonical" href="https://www.hardpack.travel/trip-planner.html">
+<meta name="theme-color" content="#E8E4DC">
+<meta name="author" content="Hardpack Trip Co.">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hardpack Trip Co.">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Free Trip Planner and Itinerary Builder | Hardpack Trip Co.">
+<meta property="og:description" content="Build a day-by-day itinerary in your browser. Time-stamped stops, travel time between them, and a running cost per person in USD. Free, no account needed.">
+<meta property="og:url" content="https://www.hardpack.travel/trip-planner.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&fit=crop&auto=format&q=75">
+<meta property="og:image:alt" content="Hardpack Trip Co. trip organizer and travel planner">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Trip Planner and Itinerary Builder | Hardpack Trip Co.">
+<meta name="twitter:description" content="Build a day-by-day itinerary in your browser. Time-stamped stops, travel time between them, and a running cost per person in USD. Free, no account needed.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&fit=crop&auto=format&q=75">
+
+<!-- Favicons (raster, no vector artwork anywhere on this site) -->
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Hardpack Trip Planner",
+  "url": "https://www.hardpack.travel/trip-planner.html",
+  "applicationCategory": "TravelApplication",
+  "browserRequirements": "Requires JavaScript. Works in any current browser.",
+  "operatingSystem": "Web browser",
+  "description": "A free interactive itinerary builder. Add time-stamped stops with travel time and cost per person, and watch the daily and trip totals update in USD.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "Hardpack Trip Co." }
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- SIGNATURE: baseline grid overlay, drawn on every page -->
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<!-- Cursor-follow crosshair. Pointer devices only, off under reduced motion. -->
+<div class="crosshair" id="crosshair" aria-hidden="true">
+  <span class="crosshair__v"></span>
+  <span class="crosshair__h"></span>
+</div>
+
+<!-- Wordmark header (mobile and tablet) -->
+<header class="topbar">
+  <a class="wordmark" href="index.html">HARDPACK<span>TRIP CO.</span></a>
+  <button class="hamburger" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+    <span class="hamburger__box" aria-hidden="true"></span>
+    <span class="hamburger__label">Menu</span>
+  </button>
+</header>
+
+<!-- Fixed left vertical sidebar (1024px and up) -->
+<nav class="sidebar" id="primaryNav" aria-label="Primary">
+  <a class="sidebar__wordmark" href="index.html">HARD<br>PACK</a>
+  <p class="sidebar__meta">Trip organizer<br>and travel planner<br>Portland, Oregon</p>
+  <ul class="sidebar__list">
+        <li><a data-idx="01" href="index.html">Home</a></li>
+        <li><a data-idx="02" href="how-it-works.html">How it works</a></li>
+        <li><a data-idx="03" href="trip-planner.html" aria-current="page">Trip planner</a></li>
+        <li><a data-idx="04" href="destinations.html">Destinations</a></li>
+        <li><a data-idx="05" href="itineraries.html">Itineraries</a></li>
+        <li><a data-idx="06" href="guides.html">Guides</a></li>
+        <li><a data-idx="07" href="tools.html">Free tools</a></li>
+        <li><a data-idx="08" href="pricing.html">Pricing</a></li>
+        <li><a data-idx="09" href="for-travel-agents.html">For travel agents</a></li>
+        <li><a data-idx="10" href="testimonials.html">Reviews</a></li>
+        <li><a data-idx="11" href="about.html">About</a></li>
+        <li><a data-idx="12" href="contact.html">Contact</a></li>
+  </ul>
+  <a class="btn btn--accent sidebar__cta" href="trip-planner.html">Start a trip</a>
+  <p class="sidebar__contact">
+    <a href="tel:+15035550182">+1 (503) 555-0182</a><br>
+    <a href="mailto:hello@hardpack.travel">hello@hardpack.travel</a>
+  </p>
+  <button class="btn btn--sm btn--ghost" type="button" data-grid-toggle aria-pressed="true">Grid: on</button>
+</nav>
+
+<main class="main" id="main">
+
+<section class="section section--tight" aria-labelledby="tp-h">
+  <span class="coord">N 45.5152 / W 122.6784 &middot; SEC 00 &middot; BUILDER</span>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol><li><a href="index.html">Home</a></li><li>Trip planner</li></ol>
+    </nav>
+    <h1 class="display-xl">Trip<br>planner</h1>
+    <p class="lead mt-2">Build a day-by-day plan right here in the browser. Add stops with a time, a
+    travel time from the last stop, and a cost per person. The day totals and the trip totals do the
+    rest. Everything you enter is stored in this browser only.</p>
+    <div class="btn-row">
+      <button class="btn btn--accent" id="loadSample" type="button">Load a 3-day sample</button>
+      <button class="btn" id="printPlan" type="button">Print or save as PDF</button>
+      <a class="btn btn--ghost" href="how-it-works.html">How the process works</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="builder-h">
+  <span class="coord">N 45.5152 / W 122.6784 &middot; SEC 01 &middot; WORKSPACE</span>
+  <div class="wrap">
+    <h2 id="builder-h" class="visually-hidden">Itinerary builder</h2>
+
+    <div class="planner" id="planner">
+
+      <!-- LEFT: input -->
+      <div>
+        <section class="panel" aria-labelledby="trip-meta-h">
+          <h3 class="panel__head" id="trip-meta-h">Trip details</h3>
+          <div class="panel__body">
+            <div class="field">
+              <label for="tripName">Trip name</label>
+              <input class="input" type="text" id="tripName" name="tripName"
+                     placeholder="Iceland Ring Road, 7 days" data-label="Trip name">
+            </div>
+            <div class="field" style="margin-bottom:0;">
+              <label for="tripTravelers">Travelers</label>
+              <span class="hint">Used to turn the per-person cost into a trip total.</span>
+              <input class="input" type="number" id="tripTravelers" name="tripTravelers"
+                     min="1" max="20" step="1" value="2" data-label="Traveler count">
+            </div>
+          </div>
+        </section>
+
+        <form class="panel mt-2" id="stopForm" novalidate aria-labelledby="add-stop-h">
+          <h3 class="panel__head" id="add-stop-h">Add a stop</h3>
+          <div class="panel__body">
+            <div class="field">
+              <label for="stopTitle">What is it <span class="req">(required)</span></label>
+              <input class="input" type="text" id="stopTitle" name="stopTitle" required
+                     data-label="Stop name" aria-describedby="err-stopTitle"
+                     placeholder="Delicate Arch sunrise hike">
+              <p class="err" id="err-stopTitle" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="stopTime">Start time <span class="req">(required)</span></label>
+              <input class="input" type="time" id="stopTime" name="stopTime" required
+                     data-label="Start time" aria-describedby="err-stopTime" value="09:00">
+              <p class="err" id="err-stopTime" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="stopCat">Type</label>
+              <select class="select" id="stopCat" name="stopCat" data-label="Stop type">
+                <option>Sightseeing</option>
+                <option>Hike</option>
+                <option>Food</option>
+                <option>Activity</option>
+                <option>Transit</option>
+                <option>Lodging</option>
+                <option>Museum</option>
+                <option>Free time</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="stopMove">Travel time from the last stop</label>
+              <span class="hint">In minutes. Door to door, including parking.</span>
+              <input class="input" type="number" id="stopMove" name="stopMove" min="0" max="1440"
+                     step="5" placeholder="45" data-label="Travel time">
+            </div>
+
+            <div class="field">
+              <label for="stopCost">Cost per person (USD)</label>
+              <span class="hint">Entry, tickets, meal, or your share of a fee.</span>
+              <input class="input" type="number" id="stopCost" name="stopCost" min="0" max="100000"
+                     step="1" placeholder="30" data-label="Cost">
+            </div>
+
+            <div class="field">
+              <label for="stopNote">Note</label>
+              <span class="hint">Reservation windows, closures, what to bring.</span>
+              <textarea class="textarea" id="stopNote" name="stopNote" rows="3" style="min-height:88px;"
+                        data-label="Note" placeholder="Timed entry required 7:00 AM to 4:00 PM"></textarea>
+            </div>
+
+            <button class="btn btn--accent btn--block" type="submit">Add to day</button>
+            <p class="mono-note mt-2" id="saveNote" style="margin-bottom:0;">Saved in this browser.
+            Nothing leaves your device on the free tier.</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT: output -->
+      <div>
+        <section class="panel" aria-labelledby="plan-out-h" aria-live="polite">
+          <h3 class="panel__head" id="plan-out-h">
+            <span id="planTitle">UNTITLED TRIP</span>
+            <span id="dayCost">$0 per person</span>
+          </h3>
+
+          <div class="planner-toolbar">
+            <div class="daytabs" id="dayTabs" role="group" aria-label="Days in this trip"></div>
+            <button class="btn btn--sm" id="addDay" type="button">+ Add day</button>
+            <button class="btn btn--sm" id="removeDay" type="button">Delete this day</button>
+            <button class="btn btn--sm btn--ghost" id="clearPlan" type="button">Clear trip</button>
+          </div>
+
+          <div id="planStops"></div>
+
+          <dl class="totals">
+            <div><dt>Stops</dt><dd id="totalStops">0</dd></div>
+            <div><dt>Time on the move</dt><dd id="totalMove">0m</dd></div>
+            <div><dt>Cost per person</dt><dd id="totalPer">$0</dd></div>
+            <div><dt>Trip total</dt><dd id="totalCost">$0</dd></div>
+          </dl>
+        </section>
+
+        <div class="callout mt-2">
+          <h3 style="font-size:1rem;">Reading the totals</h3>
+          <p style="font-size:13px;margin-bottom:8px;"><strong>Time on the move</strong> adds up every
+          travel-time value across the whole trip. If a single day is over five hours, you are
+          driving a vacation, not taking one.</p>
+          <p style="font-size:13px;margin-bottom:0;"><strong>Trip total</strong> multiplies the per-person
+          cost by your traveler count. It deliberately excludes airfare, because airfare moves daily and
+          pretending otherwise makes the number useless.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--ink" aria-labelledby="tips-h">
+  <span class="coord">N 45.5152 / W 122.6784 &middot; SEC 02 &middot; METHOD</span>
+  <div class="wrap">
+    <div class="section-head" style="border-bottom-color:#FF4A1C;">
+      <h2 id="tips-h">Six rules that make a day plan survive</h2>
+    </div>
+
+    <div class="cols-2">
+      <div class="card">
+        <div class="card__body">
+          <h3 class="card__title">1. Three anchors a day, maximum</h3>
+          <p style="font-size:13px;line-height:1.6;margin:0;">One big thing in the morning, one in the
+          afternoon, one meal worth planning. Anything past that is a wish list. The fourth stop is the
+          one you skip in a bad mood at 4:00 PM.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h3 class="card__title">2. Price the day, not the trip</h3>
+          <p style="font-size:13px;line-height:1.6;margin:0;">Trip totals hide overspending. A daily
+          number tells you on day two that you are $40 a day over, while you can still do something
+          about it.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h3 class="card__title">3. Put the travel time in, honestly</h3>
+          <p style="font-size:13px;line-height:1.6;margin:0;">Mapping apps give you the drive. They do
+          not give you parking, the walk from the lot, the bathroom line, or the twenty minutes you
+          lose finding the trailhead. Add 20 percent.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h3 class="card__title">4. Leave one empty block per three days</h3>
+          <p style="font-size:13px;line-height:1.6;margin:0;">Weather, a closed road, a late train, or
+          a place you liked enough to stay in. A plan with no slack is a plan that breaks on day two
+          and never recovers.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h3 class="card__title">5. Check sunset, not just opening hours</h3>
+          <p style="font-size:13px;line-height:1.6;margin:0;">Reykjav&iacute;k in November gets about
+          five hours of usable light. Anchorage in June gets nineteen. The same itinerary is a
+          different trip depending on the month.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__body">
+          <h3 class="card__title">6. Write the note now</h3>
+          <p style="font-size:13px;line-height:1.6;margin:0;">Reservation windows, permit numbers,
+          the fact that the ferry only runs Tuesday. You will not remember it in four months, and the
+          note prints on the day card.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="lim-h">
+  <span class="coord">N 45.5152 / W 122.6784 &middot; SEC 03 &middot; LIMITS</span>
+  <div class="wrap">
+    <div class="cols-2" style="align-items:start;">
+      <div>
+        <h2 id="lim-h">What this page can and cannot do</h2>
+        <p>This planner is the real free tier. It saves to your browser, it has no account, and it does
+        not phone home. If you clear your browser data, the plan goes with it.</p>
+        <p><strong>It can:</strong> build up to fourteen days, sort stops by time automatically, total
+        cost and travel time, print to PDF through your browser, and reload where you left off.</p>
+        <p><strong>It cannot:</strong> sync between devices, share with a collaborator, alert you on price
+        drops, or store more than one trip at a time. Those live in a Hardpack account.</p>
+        <div class="btn-row" style="margin-bottom:0;">
+          <a class="btn btn--accent" href="pricing.html">See what Pro adds</a>
+          <a class="btn" href="itineraries.html">Copy a finished itinerary</a>
+        </div>
+      </div>
+      <div>
+        <figure class="im im--hard im--4x3 halftone">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&h=675&fit=crop&auto=format&q=75"
+               alt="Open laptop and a paper notebook on a desk during trip research"
+               width="900" height="675" loading="lazy" decoding="async">
+        </figure>
+        <figcaption>Research on the left, the plan on the right. That is the whole workflow.</figcaption>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <span class="coord">N 45.5152 / W 122.6784 &middot; FOOTER</span>
+  <div class="footer__grid">
+
+    <div class="footer__col footer__brand">
+      <a class="wordmark" href="index.html">HARDPACK<span>TRIP CO.</span></a>
+      <address>
+        <strong>Hardpack Trip Co.</strong><br>
+        1412 SE Stark Street, Suite 204<br>
+        Portland, OR 97214<br>
+        United States<br><br>
+        Phone: <a href="tel:+15035550182">+1 (503) 555-0182</a><br>
+        Email: <a href="mailto:hello@hardpack.travel">hello@hardpack.travel</a><br>
+        Support hours: Mon to Fri, 9:00 AM to 5:00 PM Pacific
+      </address>
+    </div>
+
+    <div class="footer__col">
+      <h3>Plan a trip</h3>
+      <ul>
+        <li><a href="trip-planner.html">Trip planner</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="itineraries.html">Sample itineraries</a></li>
+        <li><a href="tools.html">Packing checklists and free tools</a></li>
+        <li><a href="guides.html">Travel guides</a></li>
+        <li><a href="pricing.html">Pricing and plans</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="for-travel-agents.html">For travel agents</a></li>
+        <li><a href="testimonials.html">Reviews</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy policy</a></li>
+        <li><a href="terms-of-service.html">Terms of service</a></li>
+        <li><a href="cookie-policy.html">Cookie policy</a></li>
+        <li><a href="affiliate-disclosure.html">Affiliate disclosure</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="accessibility.html">Accessibility statement</a></li>
+        <li><a href="refund-policy.html">Refund and cancellation policy</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    <div>
+      <p style="max-width:70ch;margin:0 0 10px;">
+        &copy; <span data-year>2026</span> Hardpack Trip Co. All rights reserved. Hardpack is an independent
+        trip planning tool. We are not a travel agency, tour operator, or seller of travel, and we do not
+        hold your booking. Some links on this site are affiliate links and we may earn a commission at no
+        extra cost to you. See our <a href="affiliate-disclosure.html">affiliate disclosure</a>.
+      </p>
+      <div class="footer__legalrow">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-of-service.html">Terms</a>
+        <a href="cookie-policy.html">Cookies</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="contact.html">Contact</a>
+        <a href="cookie-policy.html" data-cookie-reopen>Cookie settings</a>
+      </div>
+    </div>
+    <div>
+      <a class="dns-link" href="privacy-policy.html#ccpa" data-cookie-reopen>Do Not Sell or Share My Personal Information</a>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button">&uarr; Top</button>
+
+<!-- Cookie consent. No analytics or advertising storage is set before a choice is made. -->
+<div class="cookie" id="cookieBanner" role="region" aria-label="Cookie consent">
+  <div class="cookie__inner">
+    <div>
+      <h2>Cookies on hardpack.travel</h2>
+      <p>
+        Essential cookies keep the planner and your saved trips working. With your permission we also use
+        analytics cookies and advertising cookies, including cookies set by Google and its partners, to
+        measure traffic and show relevant ads. Nothing optional is switched on until you choose. Details are
+        in our <a href="cookie-policy.html">Cookie Policy</a> and <a href="privacy-policy.html">Privacy Policy</a>.
+      </p>
+    </div>
+    <div class="cookie__actions">
+      <button class="btn btn--accent" id="cookieAccept" type="button">Accept all</button>
+      <button class="btn" id="cookieReject" type="button">Reject non-essential</button>
+      <button class="btn btn--ghost" id="cookieManage" type="button" aria-expanded="false" aria-controls="cookiePrefs">Manage preferences</button>
+    </div>
+    <div class="cookie__prefs" id="cookiePrefs">
+      <div class="check">
+        <input type="checkbox" id="cookieEssential" checked disabled>
+        <label for="cookieEssential"><strong>Strictly necessary.</strong> Always on. Remembers your consent choice, your saved trips and your checklist progress. Cannot be switched off.</label>
+      </div>
+      <div class="check">
+        <input type="checkbox" id="cookieAnalytics">
+        <label for="cookieAnalytics"><strong>Analytics.</strong> Helps us count visits and see which guides people finish. Aggregated, never sold.</label>
+      </div>
+      <div class="check">
+        <input type="checkbox" id="cookieAds">
+        <label for="cookieAds"><strong>Advertising.</strong> Lets Google and its partners use cookies to serve and measure ads, including personalized ads where permitted.</label>
+      </div>
+      <button class="btn btn--ink btn--sm" id="cookieSave" type="button">Save my preferences</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Hardpack Trip Co.
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://www.hardpack.travel/sitemap.xml

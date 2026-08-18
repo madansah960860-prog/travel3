@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How It Works | Hardpack Trip Planner</title>
+<meta name="description" content="The five step Hardpack process: shape the trip, drop the anchors, add real travel times and costs, pressure test the days, then pack and export.">
+<link rel="canonical" href="https://www.hardpack.travel/how-it-works.html">
+<meta name="theme-color" content="#E8E4DC">
+<meta name="author" content="Hardpack Trip Co.">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hardpack Trip Co.">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="How It Works | Hardpack Trip Planner">
+<meta property="og:description" content="The five step Hardpack process: shape the trip, drop the anchors, add real travel times and costs, pressure test the days, then pack and export.">
+<meta property="og:url" content="https://www.hardpack.travel/how-it-works.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1517400508447-f8dd518b86db?w=1200&h=630&fit=crop&auto=format&q=75">
+<meta property="og:image:alt" content="Hardpack Trip Co. trip organizer and travel planner">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How It Works | Hardpack Trip Planner">
+<meta name="twitter:description" content="The five step Hardpack process: shape the trip, drop the anchors, add real travel times and costs, pressure test the days, then pack and export.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1517400508447-f8dd518b86db?w=1200&h=630&fit=crop&auto=format&q=75">
+
+<!-- Favicons (raster, no vector artwork anywhere on this site) -->
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to plan a trip with Hardpack",
+  "description": "A five step process for turning a destination into a time-stamped, priced day plan.",
+  "totalTime": "PT45M",
+  "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" },
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Set the shape of the trip", "text": "Enter your destination, travel dates, traveler count and departure airport." },
+    { "@type": "HowToStep", "position": 2, "name": "Drop in the anchors", "text": "Add the two or three things the trip exists for, then build the rest of the day around them." },
+    { "@type": "HowToStep", "position": 3, "name": "Fill the gaps with real numbers", "text": "Add travel time between stops and a cost per person so each day totals honestly." },
+    { "@type": "HowToStep", "position": 4, "name": "Pressure test the plan", "text": "Check daylight, opening hours, timed entry windows and the weather buffer." },
+    { "@type": "HowToStep", "position": 5, "name": "Pack and export", "text": "Generate the checklist and export a printable one-page-per-day PDF." }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- SIGNATURE: baseline grid overlay, drawn on every page -->
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<!-- Cursor-follow crosshair. Pointer devices only, off under reduced motion. -->
+<div class="crosshair" id="crosshair" aria-hidden="true">
+  <span class="crosshair__v"></span>
+  <span class="crosshair__h"></span>
+</div>
+
+<!-- Wordmark header (mobile and tablet) -->
+<header class="topbar">
+  <a class="wordmark" href="index.html">HARDPACK<span>TRIP CO.</span></a>
+  <button class="hamburger" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+    <span class="hamburger__box" aria-hidden="true"></span>
+    <span class="hamburger__label">Menu</span>
+  </button>
+</header>
+
+<!-- Fixed left vertical sidebar (1024px and up) -->
+<nav class="sidebar" id="primaryNav" aria-label="Primary">
+  <a class="sidebar__wordmark" href="index.html">HARD<br>PACK</a>
+  <p class="sidebar__meta">Trip organizer<br>and travel planner<br>Portland, Oregon</p>
+  <ul class="sidebar__list">
+        <li><a data-idx="01" href="index.html">Home</a></li>
+        <li><a data-idx="02" href="how-it-works.html" aria-current="page">How it works</a></li>
+        <li><a data-idx="03" href="trip-planner.html">Trip planner</a></li>
+        <li><a data-idx="04" href="destinations.html">Destinations</a></li>
+        <li><a data-idx="05" href="itineraries.html">Itineraries</a></li>
+        <li><a data-idx="06" href="guides.html">Guides</a></li>
+        <li><a data-idx="07" href="tools.html">Free tools</a></li>
+        <li><a data-idx="08" href="pricing.html">Pricing</a></li>
+        <li><a data-idx="09" href="for-travel-agents.html">For travel agents</a></li>
+        <li><a data-idx="10" href="testimonials.html">Reviews</a></li>
+        <li><a data-idx="11" href="about.html">About</a></li>
+        <li><a data-idx="12" href="contact.html">Contact</a></li>
+  </ul>
+  <a class="btn btn--accent sidebar__cta" href="trip-planner.html">Start a trip</a>
+  <p class="sidebar__contact">
+    <a href="tel:+15035550182">+1 (503) 555-0182</a><br>
+    <a href="mailto:hello@hardpack.travel">hello@hardpack.travel</a>
+  </p>
+  <button class="btn btn--sm btn--ghost" type="button" data-grid-toggle aria-pressed="true">Grid: on</button>
+</nav>
+
+<main class="main" id="main">
+
+<section class="section section--tight" aria-labelledby="hiw-h">
+  <span class="coord">N 45.5152 / W 122.6784 &middot; SEC 00 &middot; PROCESS</span>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol><li><a href="index.html">Home</a></li><li>How it works</li></ol>
+    </nav>
+    <h1 class="display-xl">How it<br>works</h1>
+    <p class="lead mt-2">Five steps, about forty-five minutes for a week-long trip. Nothing here needs a
+    credit card and nothing gets emailed to you unless you ask.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="steps-h">
+  <span class="coord">N 45.5152 / W 122.6784 &middot; SEC 01 &middot; STEPS 1&ndash;5</span>
+  <div class="wrap">
+    <h2 id="steps-h" class="visually-hidden">The five steps</h2>
+
+    <div class="cols-2" style="align-items:start;">
+      <div>
+        <div class="step mb-2">
+          <span class="step__n">01</span>
+          <div class="step__body">
+            <h3>Set the shape of the trip</h3>
+            <p>Destination, dates in MM/DD/YYYY, number of travelers, and your departure airport. That
+            last field matters more than people expect. A trip out of Newark and the same trip out of
+            Boise are different trips once you price the flight and the connection.</p>
+            <p style="margin-top:10px;"><strong>Takes about two minutes.</strong> You can change any of it later
+            and the plan re-prices itself.</p>
+          </div>
+        </div>
+
+        <div class="step mb-2">
+          <span class="step__n">02</span>
+          <div class="step__body">
+            <h3>Drop in the anchors first</h3>
+            <p>Most trips have two or three non-negotiables. The permit you already won. The dinner
+            reservation. The one museum. Put those on the calendar before anything else, because
+            everything else has to bend around them.</p>
+            <p style="margin-top:10px;">If an anchor has a timed entry window or a lottery date, add it as a
+            note on the stop. It shows up on the printed plan.</p>
+          </div>
+        </div>
+
+        <div class="step mb-2">
+          <span class="step__n">03</span>
+          <div class="step__body">
+            <h3>Fill the gaps with real numbers</h3>
+            <p>Every stop takes a travel time from the previous stop and a cost per person. This is the
+            unglamorous part and it is the entire reason the tool exists. A day with six stops and
+            four hours of driving is not a day, it is a commute.</p>
+            <p style="margin-top:10px;">The day card totals the cost in USD and shows the total time on the
+            move. When that number crosses five hours, cut a stop.</p>
+          </div>
+        </div>
+
+        <div class="step mb-2">
+          <span class="step__n">04</span>
+          <div class="step__body">
+            <h3>Pressure test it</h3>
+            <p>Check four things before you call the day done: sunset time at that latitude in that
+            month, opening and closing hours, any timed-entry or reservation window, and whether you
+            have left one flexible block for weather. Trips in Iceland and the Pacific Northwest need
+            a bigger weather buffer than trips in Arizona.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step__n">05</span>
+          <div class="step__body">
+            <h3>Pack, export, go</h3>
+            <p>Pick a checklist profile that matches the trip. Cold and wet, desert heat, carry-on only,
+            international documents. Then export. Pro members get an unlimited printable PDF, one page
+            per day, that reads fine with no signal. Free members can buy a single export for $6.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="offset-down">
+        <figure class="im im--hard im--3x4 halftone">
+          <img src="https://images.unsplash.com/photo-1517400508447-f8dd518b86db?w=800&h=1066&fit=crop&auto=format&q=75"
+               alt="Traveler with a backpack reading a departures board inside an airport terminal"
+               width="800" height="1066" loading="lazy" decoding="async">
+        </figure>
+        <figcaption>Step five happens here, not at your desk.</figcaption>
+
+        <div class="callout mt-2">
+          <h3 style="font-size:1rem;">The US traveler defaults</h3>
+          <p style="font-size:13px;">Hardpack assumes you are planning from the United States, so every
+          default is set that way:</p>
+          <ul style="font-size:13px;line-height:1.6;margin-bottom:0;">
+            <li>Prices in USD, distances in miles, temperatures in &deg;F</li>
+            <li>Dates in MM/DD/YYYY</li>
+            <li>PTO tracker counts business days, not calendar days</li>
+            <li>Airport picker starts from the 42 busiest US departure airports</li>
+            <li>Security notes cover TSA PreCheck, CLEAR and Global Entry timing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section--ink" aria-labelledby="tiers-h">
+  <span class="coord">N 45.5152 / W 122.6784 &middot; SEC 02 &middot; WHAT IT COSTS</span>
+  <div class="wrap">
+    <div class="section-head" style="border-bottom-color:#FF4A1C;">
+      <h2 id="tiers-h">Where the free line sits</h2>
+      <a class="arrow-link" style="border-color:#FF4A1C;" href="pricing.html">Pricing detail</a>
+    </div>
+    <p class="lead" style="color:#E8E4DC;">The free tier is a real product, not a trial. Two active trips,
+    up to fourteen days each, full day-plan cards with costs, and three packing templates. No expiry, no
+    card, no drip emails.</p>
+    <p style="color:#E8E4DC;max-width:66ch;">Pro exists for people who plan more than two trips a year, or
+    who plan for other people. Unlimited trips, unlimited days, six collaborators, price alerts, all eleven
+    checklist templates, and unlimited offline PDF export for $9 a month or $79 a year.</p>
+    <p style="color:#E8E4DC;max-width:66ch;">If you would rather hand the whole thing to somebody else, the
+    custom itinerary service is a flat $149. A planner on our team builds and reviews the trip, then you own
+    the file in your account like any other.</p>
+    <div class="btn-row" style="margin-bottom:0;">
+      <a class="btn btn--accent" href="trip-planner.html">Open the planner</a>
+      <a class="btn btn--ink" style="background:#E8E4DC;color:#111;" href="pricing.html">See plans</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="afterh">
+  <span class="coord">N 63.4184 / W 19.0060 &middot; SEC 03 &middot; RESULT</span>
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="afterh">What comes out the other end</h2>
+      <a class="arrow-link" href="itinerary-iceland-ring-road.html">Read the full Iceland plan</a>
+    </div>
+
+    <div class="dayplan">
+      <article class="day">
+        <header class="day__head">
+          <span class="day__n">02</span>
+          <span class="day__route">Reykjav&iacute;k &rarr; V&iacute;k</span>
+          <span class="day__tag">Iceland Ring Road &middot; Day 2 of 7</span>
+        </header>
+        <ul class="day__stops">
+          <li>
+            <span class="stop__time">8:00 AM</span>
+            <span class="stop__main">
+              <span class="stop__title">Thingvellir National Park</span>
+              <p class="stop__desc">Walk the rift between the North American and Eurasian plates. Parking
+              is paid at a machine or online, and rangers do check.</p>
+              <span class="stop__tags"><span class="chip">Sightseeing &middot; 1h 30m</span><span class="chip chip--move">Travel 55 min &middot; 31 mi</span><span class="chip chip--cost">$9 parking</span></span>
+            </span>
+          </li>
+          <li>
+            <span class="stop__time">11:00 AM</span>
+            <span class="stop__main">
+              <span class="stop__title">Geysir geothermal field</span>
+              <p class="stop__desc">Strokkur erupts every six to ten minutes. Twenty-five minutes here is
+              enough unless the light is doing something.</p>
+              <span class="stop__tags"><span class="chip">Sightseeing &middot; 45m</span><span class="chip chip--move">Travel 50 min &middot; 37 mi</span><span class="chip chip--cost">$0</span></span>
+            </span>
+          </li>
+          <li>
+            <span class="stop__time">1:30 PM</span>
+            <span class="stop__main">
+              <span class="stop__title">Gullfoss</span>
+              <p class="stop__desc">Take the upper viewpoint if it is windy. The lower path ices over
+              from October and the railing does not help much.</p>
+              <span class="stop__tags"><span class="chip">Sightseeing &middot; 1h</span><span class="chip chip--move">Travel 12 min &middot; 6 mi</span><span class="chip chip--cost">$0</span></span>
+            </span>
+          </li>
+          <li>
+            <span class="stop__time">4:30 PM</span>
+            <span class="stop__main">
+              <span class="stop__title">Seljalandsfoss</span>
+              <p class="stop__desc">You can walk behind this one. You will get soaked doing it, so a rain
+              shell and a dry bag for the phone are not optional.</p>
+              <span class="stop__tags"><span class="chip">Sightseeing &middot; 1h</span><span class="chip chip--move">Travel 1h 35m &middot; 76 mi</span><span class="chip chip--cost">$8 parking</span></span>
+            </span>
+          </li>
+          <li>
+            <span class="stop__time">7:30 PM</span>
+            <span class="stop__main">
+              <span class="stop__title">Check in, guesthouse in V&iacute;k</span>
+              <p class="stop__desc">Last fuel stop before the guesthouse is in Hvolsv&ouml;llur. Fill up
+              there, not in V&iacute;k, where the price runs higher.</p>
+              <span class="stop__tags"><span class="chip">Lodging</span><span class="chip chip--move">Travel 45 min &middot; 33 mi</span><span class="chip chip--cost">$93 per person</span></span>
+            </span>
+          </li>
+        </ul>
+        <div class="day__cost">
+          <span>Estimated daily cost &middot; 4h 17m on the move &middot; 183 mi</span>
+          <b>$164 per person</b>
+        </div>
+        <p class="day__note">Two travelers, one rental 4x4, fuel at $8.10 per gallon. Lodging is a shared
+        double counted per person.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--accent" aria-labelledby="faqcta">
+  <span class="coord">N 45.5152 / W 122.6784 &middot; SEC 04 &middot; NEXT</span>
+  <div class="wrap">
+    <h2 id="faqcta">Still deciding?</h2>
+    <p class="lead">The FAQ answers the twenty questions people ask before signing up, including what
+    happens to your trips if you cancel Pro. Short version: they stay, read-only, forever.</p>
+    <div class="btn-row" style="margin-bottom:0;">
+      <a class="btn btn--ink" href="faq.html">Read the FAQ</a>
+      <a class="btn" href="trip-planner.html">Just start planning</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <span class="coord">N 45.5152 / W 122.6784 &middot; FOOTER</span>
+  <div class="footer__grid">
+
+    <div class="footer__col footer__brand">
+      <a class="wordmark" href="index.html">HARDPACK<span>TRIP CO.</span></a>
+      <address>
+        <strong>Hardpack Trip Co.</strong><br>
+        1412 SE Stark Street, Suite 204<br>
+        Portland, OR 97214<br>
+        United States<br><br>
+        Phone: <a href="tel:+15035550182">+1 (503) 555-0182</a><br>
+        Email: <a href="mailto:hello@hardpack.travel">hello@hardpack.travel</a><br>
+        Support hours: Mon to Fri, 9:00 AM to 5:00 PM Pacific
+      </address>
+    </div>
+
+    <div class="footer__col">
+      <h3>Plan a trip</h3>
+      <ul>
+        <li><a href="trip-planner.html">Trip planner</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="itineraries.html">Sample itineraries</a></li>
+        <li><a href="tools.html">Packing checklists and free tools</a></li>
+        <li><a href="guides.html">Travel guides</a></li>
+        <li><a href="pricing.html">Pricing and plans</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="for-travel-agents.html">For travel agents</a></li>
+        <li><a href="testimonials.html">Reviews</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy policy</a></li>
+        <li><a href="terms-of-service.html">Terms of service</a></li>
+        <li><a href="cookie-policy.html">Cookie policy</a></li>
+        <li><a href="affiliate-disclosure.html">Affiliate disclosure</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="accessibility.html">Accessibility statement</a></li>
+        <li><a href="refund-policy.html">Refund and cancellation policy</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    <div>
+      <p style="max-width:70ch;margin:0 0 10px;">
+        &copy; <span data-year>2026</span> Hardpack Trip Co. All rights reserved. Hardpack is an independent
+        trip planning tool. We are not a travel agency, tour operator, or seller of travel, and we do not
+        hold your booking. Some links on this site are affiliate links and we may earn a commission at no
+        extra cost to you. See our <a href="affiliate-disclosure.html">affiliate disclosure</a>.
+      </p>
+      <div class="footer__legalrow">
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms-of-service.html">Terms</a>
+        <a href="cookie-policy.html">Cookies</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="contact.html">Contact</a>
+        <a href="cookie-policy.html" data-cookie-reopen>Cookie settings</a>
+      </div>
+    </div>
+    <div>
+      <a class="dns-link" href="privacy-policy.html#ccpa" data-cookie-reopen>Do Not Sell or Share My Personal Information</a>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button">&uarr; Top</button>
+
+<!-- Cookie consent. No analytics or advertising storage is set before a choice is made. -->
+<div class="cookie" id="cookieBanner" role="region" aria-label="Cookie consent">
+  <div class="cookie__inner">
+    <div>
+      <h2>Cookies on hardpack.travel</h2>
+      <p>
+        Essential cookies keep the planner and your saved trips working. With your permission we also use
+        analytics cookies and advertising cookies, including cookies set by Google and its partners, to
+        measure traffic and show relevant ads. Nothing optional is switched on until you choose. Details are
+        in our <a href="cookie-policy.html">Cookie Policy</a> and <a href="privacy-policy.html">Privacy Policy</a>.
+      </p>
+    </div>
+    <div class="cookie__actions">
+      <button class="btn btn--accent" id="cookieAccept" type="button">Accept all</button>
+      <button class="btn" id="cookieReject" type="button">Reject non-essential</button>
+      <button class="btn btn--ghost" id="cookieManage" type="button" aria-expanded="false" aria-controls="cookiePrefs">Manage preferences</button>
+    </div>
+    <div class="cookie__prefs" id="cookiePrefs">
+      <div class="check">
+        <input type="checkbox" id="cookieEssential" checked disabled>
+        <label for="cookieEssential"><strong>Strictly necessary.</strong> Always on. Remembers your consent choice, your saved trips and your checklist progress. Cannot be switched off.</label>
+      </div>
+      <div class="check">
+        <input type="checkbox" id="cookieAnalytics">
+        <label for="cookieAnalytics"><strong>Analytics.</strong> Helps us count visits and see which guides people finish. Aggregated, never sold.</label>
+      </div>
+      <div class="check">
+        <input type="checkbox" id="cookieAds">
+        <label for="cookieAds"><strong>Advertising.</strong> Lets Google and its partners use cookies to serve and measure ads, including personalized ads where permitted.</label>
+      </div>
+      <button class="btn btn--ink btn--sm" id="cookieSave" type="button">Save my preferences</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
